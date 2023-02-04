@@ -6,11 +6,13 @@ public class Main {
         Author korneyChukovskiy = new Author("Корней", "Чуковский");
         Book barmaley = new Book("БАРМАЛЕЙ", korneyChukovskiy, 1925);
         Book mother = new Book("МАТЬ", maksimGorkiy, 1906);
+        System.out.println(maksimGorkiy.toString());
+        System.out.println(barmaley.toString());
+        Book barmaleychik = new Book("БАРМАЛЕЙ", korneyChukovskiy, 1925);
+        System.out.println(barmaley.equals(barmaleychik));
+        System.out.println(java.util.Objects.hash(barmaley));
+        System.out.println(java.util.Objects.hash(barmaleychik));
+        System.out.println(java.util.Objects.hash(mother));
 
-        // Пробовал вывести в консоль для самопроверки.
-//        System.out.println(barmaley.getAuthor().getName());
-//        System.out.println(barmaley.getAuthor().getSurname());
-//        System.out.println(barmaley.getBookName());
-//        System.out.println(barmaley.getPublishingYear());
     }
 }
